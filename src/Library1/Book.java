@@ -5,14 +5,14 @@ public class Book {
     private String bookName; // Название книги
     private String bookAuthor; // Автор книги
     private String bookGenre; // Жанр книги
-    private int booksCount; // Количество книг
+    private int bookCount; // Количество книг
 
-    public Book(String bookNumber, String bookName, String bookAuthor, String bookGenre, int booksCount) {
+    public Book(String bookNumber, String bookName, String bookAuthor, String bookGenre, int bookCount) {
         this.bookNumber = bookNumber;
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
         this.bookGenre = bookGenre;
-        this.booksCount = booksCount;
+        this.bookCount = bookCount;
     }
 
     public Book() {
@@ -20,7 +20,7 @@ public class Book {
     }
 
     public String getBooksInfo() {
-        return String.format("  %s\t|\t%-35s |\t%-25s \t|\t%-45s\t|\t \t\t  %d\t\t\t|", bookNumber, bookName, bookAuthor, bookGenre, booksCount);
+        return String.format("  %s\t|\t%-35s |\t%-25s \t|\t%-45s\t|\t \t\t  %-5d\t\t\t|", bookNumber, bookName, bookAuthor, bookGenre, bookCount);
     }
 
 
@@ -31,7 +31,7 @@ public class Book {
                 "\nНазвание: " + "\"" + bookName + "\"" +
                 "\nАвтор: " + "\"" + bookAuthor + "\"" +
                 "\nЖанр: " + "\"" + bookGenre + "\"" +
-                "\nКоличество экземпляров: " + "\"" + booksCount + "\"";
+                "\nКоличество экземпляров: " + "\"" + bookCount + "\"";
     }
 
     public String getBookNumber() {
@@ -66,11 +66,11 @@ public class Book {
         this.bookGenre = bookGenre;
     }
 
-    public int getBooksCount() {
-        return booksCount;
+    public int getBookCount() {
+        return bookCount;
     }
 
-    public void setBooksCount(int booksCount) {
-        this.booksCount = booksCount;
+    public void setBookCount(int booksCount) {
+        this.bookCount = booksCount;
     }
 }

@@ -13,9 +13,9 @@ public class UserBase implements UserInterface {
     List<User> userlist = new ArrayList<>();
 
     public void init() {
-        //User admin = new User(1,"admin", "admin");
+        User admin = new User(0,"admin", "admin");
 
-        //userlist.add(admin);
+        userlist.add(admin);
     }
 
     @Override

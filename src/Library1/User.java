@@ -1,12 +1,12 @@
 package Library1;
 
 public class User {
-    private int no;   // Серийный номер
+    private int registrationNumber;   // Номер регистрации
     private String userLogin; // Имя пользователя
     private String userPassword; // пароль пользователя
 
-    public User(int no, String userLogin, String userPassword) {
-        this.no = no;
+    public User(int registrationNumber, String userLogin, String userPassword) {
+        this.registrationNumber = registrationNumber;
         this.userLogin = userLogin;
         this.userPassword = userPassword;
     }
@@ -15,18 +15,21 @@ public class User {
         this.userLogin = userLogin;
     }
 
-    public User(int no, String userLogin) {
-        this.no = no;
+    public User(int registrationNumber, String userLogin) {
+        this.registrationNumber = registrationNumber;
         this.userLogin = userLogin;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "no=" + no +
-                ", userLogin='" + userLogin + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                '}';
+    public String getUsersInfo() {
+        return String.format("\t\t%-10d|\t %-23s|\t%-16s|", registrationNumber, userLogin, userPassword);
+    }
+
+    public int getRegistrationNumber() {
+        return registrationNumber;
+    }
+
+    public void setRegistrationNumber(int registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
     public String getUserLogin() {
